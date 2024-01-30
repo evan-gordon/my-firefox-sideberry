@@ -1,0 +1,25 @@
+:root {
+  --sidebar-hover-width: 52px;
+  --sidebar-visible-width: 32px;
+}
+
+#appcontent {
+  margin-left: 45px;
+}
+
+.sidebar {
+  width: calc(45px * 7) !important;
+  max-width: 50vw !important;
+  height: 100%;
+}
+
+.sidebar-box {
+  position: relative !important;
+  overflow:hidden;
+  max-width: var(--sidebar-hover-width) !important;
+}
+
+.sidebar-box:hover {
+  transition: all 200ms !important;
+  max-width: var(--sidebar-visible-width) !important;
+}

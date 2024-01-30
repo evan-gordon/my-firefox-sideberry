@@ -1,0 +1,38 @@
+/* Paste the contents of this file int sideberry settings -> styles editor */
+#root.root {
+    /* main hover size settings */
+    --sidebar-width: 66;
+    --sidebar-hover-width: 66px;
+    --sidebar-visible-width: 250px;
+
+    --sidebar-autohide-delay: 120ms;
+    --sidebar-autohide-transition-duration: 80ms;
+    --sidebar-autohide-transition-type: linear;
+
+    --nav-btn-width: 36px;
+    --nav-btn-height: 36px;
+    --tabs-height: 36px;
+    --button-n-tab-colour: rgb(0,0,0,0);
+    --tabs-lvl-opacity: 0;
+    --tabs-close-btn-margin: 3px;
+}
+
+.new-tab-btn {
+  margin-top: 5px
+}
+
+.main-box { 
+  position: relative !important;
+  overflow:hidden;
+}
+
+
+.main-box:hover {
+  transition: all 200ms !important;
+  transition-timing-function: ease-in;
+  max-width: var(--sidebar-visible-width) !important;
+}
+
+.tab {
+  
+}

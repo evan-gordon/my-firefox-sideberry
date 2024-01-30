@@ -1,0 +1,75 @@
+
+/* Remove sidebar header */
+#TabsToolbar,
+#sidebar-header {
+  visibility: collapse;
+  overflow: hidden;
+  padding-inline: 0 !important;
+}
+/* Re-add window controls */
+#TabsToolbar .titlebar-buttonbox-container{
+  visibility: visible;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: 6px
+}
+
+/* Move nav-bar to adjust for window controls */
+#nav-bar { 
+  padding-right: 150px; 
+  padding-left: 10px;
+}
+#PanelUI-button,
+#nav-bar-overflow-button{
+  transform: translateX(-62px)
+}
+#nav-bar-customization-target,
+#PersonalToolbar{
+  padding-right: 62px !important;
+}
+
+/* Fix navbar in fullscreen */
+:root[inDOMFullscreen] .titlebar-buttonbox-container{
+  display: none
+}
+
+#sidebar-box {
+  position: relative;
+  z-index: 2;
+
+  /* lock sidebar to specified width */
+  min-width: 72px !important;
+  max-width: 72px !important;
+  overflow: hidden !important;
+  transition: all 200ms !important;
+  transition-property: width;
+  transition-timing-function: ease-in;
+}
+
+/*All other sidebar-boxes should be larger on hover*/
+#sidebar-box:hover, #sidebar-box #sidebar:hover {
+  min-width: 255px !important;
+  max-width: 255px !important;
+  z-index: 999;
+  margin-right: -300px !important;
+}
+
+/* Hide on full-screen */
+#main-window[sizemode="fullscreen"] .sidebar-box{
+  --uc-sidebar-width: 1px;
+}
+
+/* Hide border between sidebar and window content  */
+#sidebar-splitter{
+  display: none;
+}
+
+#sidebar-header::before,
+#sidebar-header::after{
+  content: "";
+  display: flex;
+  padding-left: 8px;
+}
+
+
